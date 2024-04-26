@@ -1,0 +1,540 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------- Starting page -------- */
+.page-container {
+    background-color: #000814; /* Your desired background color */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.center-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blurred-background {
+  --mask: linear-gradient(to bottom, 
+      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 35%, 
+      rgba(0,0,0, 0) 90%, rgba(0,0,0, 0) 0
+  ) 100% 50% / 100% 100% repeat-x;
+
+  -webkit-mask: var(--mask);
+}
+
+.nav {
+  background-color: #0A9396;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+  padding-bottom: 30px;
+}
+
+.site-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+  
+}
+
+.nav li  {
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: #cacaca;
+  padding-top: 0.5rem;
+}
+
+
+.nav li:hover {
+  color: #FFFFFF;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.form-container {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #83929E; */
+  /* background-color: #282c34; */
+  background-color: #40454b;
+  border-radius: 3px;
+}
+
+.exit-button {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
+}
+
+.exit-button img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.login-inner-title {
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  color: white;
+  padding-bottom: 2px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: #364B5E;
+  color: rgb(255, 255, 255);
+}
+
+.form-group input::placeholder {
+  color: #83929E;
+}
+
+.form-group input {
+  /* border: 1px solid red; */
+  border: 2px solid transparent;
+  background: #4a4f55;
+  outline: none; 
+}
+
+.form-group input:focus-within {
+  border: 2px solid #0A9396;
+  background-color: #212529;
+  /* background-color: #61dafb; */
+}
+
+.form-group input:hover {
+  border: 2px solid #0A9396;
+
+}
+ 
+/* .form-input {
+  color:#0056b3;
+  border:rgba(1, 0, 0, 0.3);
+} */
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #0A9396;
+  color: white;
+  border: none;
+  border-radius:  5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #278889;
+}
+
+/* Top Games CSS*/
+
+.top-games-container {
+  margin-left: 250px;
+  margin-right: 250px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.games-search-bar {
+  width: 300px; /* Adjust width as needed */
+  height: 30px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.games-search-bar:focus, .genre-dropdown:focus {
+  outline: none;
+  border-color: none; /* Change color on focus */
+  border: none;
+  outline: none;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.page-title {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+.clear-button, .page-button {
+  letter-spacing: 0.5px;
+  height: auto;
+  font-size: 16px;
+  background-color: #0A9396;
+  color: #fff;
+  border: none;
+  padding: 3px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.clear-button:hover {
+  background-color: #0056b3;
+}
+
+.genre-dropdown {
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  height: 30px;
+  width: auto;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  background-color: rgb(67, 81, 95, 0.5);
+  color: white;
+  border-color: none;
+  outline: none;
+}
+
+
+.genre-dropdown option {
+  background-color: #40454b;
+  border-color: none;
+  border: none;
+  outline: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as needed */
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Set background color of the track */
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(96, 96, 96, 0.5); /* Set background color of the scrollbar */
+  border-radius: 10px; /* Make the scrollbar handle round */
+}
+
+.games-grid {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-card img {
+  max-width: 100%;
+  max-height: 150px; /* Adjust the max-height as needed */
+}
+
+.games-horizontal {
+  width: 50%; /* Adjust the width as per your preference */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-bottom: 20px;
+}
+
+.games-scrollable {
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px; /* Increase the gap between game cards */
+}
+
+.game-card {
+  max-width: 200px;
+  max-height: 200px; 
+  width: auto;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure the border-radius applies correctly */
+  background-color: rgba(7, 49, 56, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.game-card img {
+  display: block; /* Ensure the image takes up the full width of its container */
+  max-width: 100%; /* Ensure the image does not exceed the width of its container */
+}
+
+.game-card h3 {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+.game-card a {
+  text-decoration: none;
+}
+
+
+
+
+/* Game details page */
+
+.details-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 250px;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
+.details-image {
+  width: auto; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 20px;
+}
+
+.details-content {
+  flex: 1;
+}
+
+.details-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.details-content p {
+  font-size: 16px;
+  color: #ffffff; /* White text color */
+}
+
+.details-reviews {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #ffffff; /* White text color */
+}
+
+
+/* Star Rating */
+.star-rating {
+  font-size: 32px; /* Make the stars bigger */
+}
+
+.star {
+  cursor: pointer;
+}
+
+.star:hover,
+.star.filled {
+  color: #0A9396; /* Change the hover color to blue */
+}
+
+.txt-click {
+  position: absolute;
+  cursor: pointer;
+}
+
+.txt-click:hover {
+  color: #0A9396;
+}
+
+
+.review-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.review-overlay-content {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #83929E; */
+  /* background-color: #282c34; */
+  background-color: #40454b;
+  border-radius: 3px;
+}
+
+.recent-reviews-div {
+  width: 50%; /* Adjust the width as per your preference */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-bottom: 20px;
+}
+
+.recent-review-content {
+  width: 100%;
+}
+
+.review-game-card {
+  max-width: 150px;
+  max-height: 150px; 
+  width: auto;
+  flex: 0 0 auto;
+  border-radius: 10px;
+}
+
+.game-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.game-link:hover {
+  color: #0A9396;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.link:hover {
+  color:#0A9396;
+}
+
+.user-link {
+  text-decoration: none;
+  font-size: 14px;
+  color: lightgrey;
+  text-align: left; 
+  margin: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.user-link:hover {
+  color: rgba(211, 211, 211, 0.733);
+}
+
+.login-to-log {
+  background-color: #0a9396;;
+  color: #ffffffcc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
