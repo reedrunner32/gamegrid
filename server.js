@@ -1,5 +1,5 @@
 require('dotenv').config();
-const url = 'mongodb+srv://admin:azfKLMEYBvAjReBH@cluster0.m6fnyuj.mongodb.net/';
+const url = '';
 const MongoClient = require('mongodb').MongoClient;
 const client = new MongoClient(url);
 client.connect();
@@ -32,13 +32,13 @@ const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 
 const oauth2Client = new OAuth2(
-    "secret.apps.googleusercontent.com",
-    "secret", // Client Secret
+    ".apps.googleusercontent.com",
+    "", // Client Secret
     "https://developers.google.com/oauthplayground" // Redirect URL
 );
 
 oauth2Client.setCredentials({
-    refresh_token: "1//04nR4Kidq7FjeCgYIARAAGAQSNwF-L9Ir-zGcKzvPhsxDGfa2q4SL7AHoFfOk8E_EZ2BP36nUwF9-ypiACLBZ_CDlZwom1suN2rA"
+    refresh_token: ""
 });
 const accessToken = oauth2Client.getAccessToken()
 
@@ -52,9 +52,9 @@ const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         type: "OAuth2",
-        clientId: "secret.apps.googleusercontent.com",
+        clientId: ".apps.googleusercontent.com",
         clientSecret: "secret",
-        refreshToken: "1//04nR4Kidq7FjeCgYIARAAGAQSNwF-L9Ir-zGcKzvPhsxDGfa2q4SL7AHoFfOk8E_EZ2BP36nUwF9-ypiACLBZ_CDlZwom1suN2rA",
+        refreshToken: "",
         user: 'gamegridmail@gmail.com',
         accessToken: accessToken
     },
